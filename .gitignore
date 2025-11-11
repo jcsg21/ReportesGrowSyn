@@ -18,6 +18,3 @@ pnpm-debug.log*
 
 # Vite cache
 /.vite/
-
-# Avoid committing workflows from local (we'll add via GitHub UI)
-.github/workflows/*.yml
