@@ -20,4 +20,5 @@ pnpm-debug.log*
 /.vite/
 
 # Avoid committing workflows from local (we'll add via GitHub UI)
-.github/workflows/*.yml
+# Commenting out to allow deploy.yml to be committed
+# .github/workflows/*.yml
