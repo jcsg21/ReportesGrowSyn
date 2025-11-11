@@ -1,0 +1,97 @@
+/* Estilos base para la cuadrícula de reportes */
+.reportes-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reportes-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.reportes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.report-card {
+  background: #fff;
+  border: 3px solid;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, background 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.report-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.5), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.report-card::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 0;
+  padding-bottom: 120%;
+  top: -10%;
+  left: -10%;
+  background: conic-gradient(from 180deg, rgba(255,255,255,0.12), rgba(255,255,255,0));
+  transform: rotate(0deg);
+  animation: spinStatic 12s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes spinStatic {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.report-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+}
+
+.report-card:hover::before {
+  opacity: 1;
+}
+
+.report-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  transition: color 0.3s ease, transform 0.6s ease;
+  animation: floatIcon 5.5s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.report-card:hover .report-icon {
+  transform: scale(1.07) translateY(-4px);
+}
+
+.report-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+.report-description {
+  font-size: 1rem;
+  color: #7f8c8d;
+}

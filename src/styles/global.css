@@ -1,0 +1,71 @@
+:root {
+  --verde: #2C5F2D;
+  --verde-oscuro: #236823;
+  --crema: #F5EEDC;
+  --dorado: #f2c94c;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--crema);
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  background-color: var(--verde-oscuro);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.banner {
+  background: linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+  background-size: cover;
+  padding: 3rem;
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.footer {
+  background-color: var(--verde);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

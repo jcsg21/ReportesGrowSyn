@@ -1,0 +1,6 @@
+{
+  "apiBase": "",
+  "reports": {
+    "ventas": "/api/reportes/ventas"
+  }
+}
