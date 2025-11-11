@@ -95,4 +95,4 @@ localStorage.removeItem('growsync_report_history_v1');
 ```
 
 ## Licencia
-Uso interno para la extracción del módulo de reportes. Revisa el repositorio original para condiciones adicionales.
+Uso interno para la extracción del módulo de reportes. Revisa el repositorio original para condiciones adicionales, prueba.
