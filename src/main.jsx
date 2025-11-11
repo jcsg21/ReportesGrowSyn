@@ -14,16 +14,27 @@ async function bootstrap() {
   } catch {}
   window.APP_CONFIG = config;
 
-  const root = createRoot(document.getElementById('root'));
-  root.render(
-    <React.StrictMode>
-      <HashRouter>
-        <AppShell>
-          <Router />
-        </AppShell>
-      </HashRouter>
-    </React.StrictMode>
-  );
+  const mount = () => {
+    const root = createRoot(document.getElementById('root'));
+    root.render(
+      <React.StrictMode>
+        <HashRouter>
+          <AppShell>
+            <Router />
+          </AppShell>
+        </HashRouter>
+      </React.StrictMode>
+    );
+  };
+
+  // Si se entra sin hash (GitHub Pages primera carga), redirige a #/inicio antes de montar
+  if (!window.location.hash || window.location.hash === '#/' ) {
+    window.location.replace(window.location.href.replace(/(#.*)?$/, '#/inicio'));
+    // Montar después de asegurar el hash
+    setTimeout(mount, 0);
+  } else {
+    mount();
+  }
 }
 
 bootstrap();
