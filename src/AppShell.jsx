@@ -18,7 +18,7 @@ function Header() {
   const logout = () => {
     try { localStorage.removeItem('user'); } catch {}
     try { localStorage.removeItem('token'); } catch {}
-    navigate('/inicio');
+    navigate('/');
   };
 
   return (
@@ -28,7 +28,6 @@ function Header() {
       </div>
       <nav>
         <ul className="nav-links">
-          <li><Link to="/inicio">Inicio</Link></li>
           <li><Link to="/reportes">Reportes</Link></li>
           <li>
             <button onClick={logout} style={{ background: 'transparent', color: '#fff', border: 'none', cursor: 'pointer', fontWeight: 700 }}>

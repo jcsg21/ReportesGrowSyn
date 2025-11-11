@@ -7,13 +7,11 @@ import ReporteInventarios from './components/ReporteInventarios.jsx';
 import ReporteProveedor from './components/ReporteProveedor.jsx';
 import ReporteHistoricos from './components/ReporteHistoricos.jsx';
 import ReporteHistoricoDetalle from './components/ReporteHistoricoDetalle.jsx';
-import Home from './components/Home.jsx';
 
 export default function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/inicio" replace />} />
-      <Route path="/inicio" element={<Home />} />
+      <Route path="/" element={<ReportesBase />} />
       <Route path="/reportes" element={<ReportesBase />} />
       <Route path="/reportes/ventas" element={<ReporteVentas />} />
       <Route path="/reportes/ventas-producto" element={<ReporteVentasProducto />} />
